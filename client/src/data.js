@@ -11,7 +11,7 @@ export const projects = [
     {
         title: "Event Planner",
         subtitle: "Java Spring Full Stack",
-        description: "Site created for event planning that allows users to create and share events as well as joining and keeping track of the guest lists for the events.",
+        description: "Web app created for event planning that allows users to create and share events as well as joining and keeping track of the guest lists for the events.",
         image: "./giphy-2.mp4",
         link: "https://github.com/jblack016/EventPlanner.git",
     },
