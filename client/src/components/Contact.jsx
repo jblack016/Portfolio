@@ -3,28 +3,28 @@ import useState from 'react'
 
 const Contact = () => {
 
-const [name, setName] = React.useState("");
-const [email, setEmail] = React.useState("");
-const [message, setMessage] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
 
-function encode(data){
-  return Object.keys(data)
-  .map(
-    (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  )
-  .join("&");
-}
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
 
-function handleSubmit(e){
-  e.preventDefault();
-  fetch("/", {
-    method: "POST",
-    headers: {"Content-Type": "application/x-www-form-urlencoded" },
-    body: encode({ "form-name": "contact", name, email, message }),
-  })
-  .then(() => alert("Message Sent!"))
-  .catch((error) => alert(error));
-}
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", name, email, message }),
+    })
+      .then(() => alert("Message Sent!"))
+      .catch((error) => alert(error));
+  }
 
 
 
@@ -46,10 +46,9 @@ function handleSubmit(e){
           <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
               <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                ADDRESS
+                Location
               </h2>
               <p className="mt-1">
-                1416 N. Pine Grove St.<br />
                 Wichita, KS 67212
               </p>
             </div>
@@ -74,11 +73,10 @@ function handleSubmit(e){
           onSubmit={handleSubmit}
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
-            Hire Me
+            Contact Me
           </h2>
           <p className="leading-relaxed mb-5">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-            suscipit officia aspernatur veritatis. Asperiores, aliquid?
+            I am always open to new opportunities to learn and contribute my skills. If you are interested in speaking with me, please don’t hesitate to reach out.
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-400">
